@@ -69,6 +69,7 @@ module ActiveRecord  # :nodoc:
           g_type = type.to_s.delete("_").upcase
           return "POINT" if g_type == "STPOINT"
           return "POLYGON" if g_type == "STPOLYGON"
+          return "RASTER" if g_type == "RASTER"
           g_type
         end
 
