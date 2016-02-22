@@ -42,6 +42,10 @@ module ActiveRecord
         def st_polygon(name, options = {})
           column(name, :st_polygon, options)
         end
+        
+        def raster(name, options = {})
+          column(name, :raster, options)
+        end
       end
 
       PostgreSQL::Table.send(:include, ColumnMethods)
