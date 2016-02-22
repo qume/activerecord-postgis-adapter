@@ -42,6 +42,7 @@ module ActiveRecord
           spatial:             {},
           st_point:            {},
           st_polygon:          {},
+          raster:              {},
         }
 
       # http://postgis.17.x6.nabble.com/Default-SRID-td5001115.html
