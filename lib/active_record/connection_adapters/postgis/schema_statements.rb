@@ -69,6 +69,7 @@ module ActiveRecord
             spatial:             "geometry",
             st_point:            "st_point",
             st_polygon:          "st_polygon",
+            raster:              "raster"
           )
         end
 
@@ -96,6 +97,7 @@ module ActiveRecord
             multi_polygon
             st_point
             st_polygon
+            raster
           ).each do |geo_type|
             map.register_type(geo_type) do |oid, _, sql_type|
               OID::Spatial.new(oid, sql_type)
