@@ -22,7 +22,7 @@ module ActiveRecord  # :nodoc:
             @srid = 4326
             @has_z = @has_m = false
             build_from_sql_type(sql_type)
-          elsif sql_type =~ /geography|geometry|point|linestring|polygon/i
+          elsif sql_type =~ /geography|geometry|point|linestring|polygon|raster/i
             # A geometry column with no geometry_columns entry.
             # @geometric_type = geo_type_from_sql_type(sql_type)
             build_from_sql_type(sql_type)
